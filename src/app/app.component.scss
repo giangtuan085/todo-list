@@ -1,0 +1,15 @@
+@import "variables";
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.content {
+    background: $primary;
+    width: 70%;
+    overflow: auto;
+}

@@ -1,0 +1,20 @@
+<div class="task-detail-container d-flex flex-column" [@openClose]="!data?.id ? 'open' : data?.show ? 'open' : 'closed'" >
+    <input type="text" placeholder="Add new task..." class="task-title">
+    <label>Description</label>
+    <textarea cols="30" rows="10"></textarea>
+    <div class="bottom d-flex">
+        <div class="date-container">
+            <label>Due date</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+        <div class="priority-container">
+            <label>Priority</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+    </div>
+</div>
