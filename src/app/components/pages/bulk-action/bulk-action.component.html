@@ -1,0 +1,7 @@
+<div [@openClose]="checkedList.length > 0 ? 'open' : 'closed'" class="bulk-action d-flex justify-between align-center">
+    <label>Bulk action:</label>
+    <div class="right">
+        <app-button class="info">Done</app-button>
+        <app-button class="danger" (click)="removeCheckedItem()">Remove</app-button>
+    </div>
+</div>

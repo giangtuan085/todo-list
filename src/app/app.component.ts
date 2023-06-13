@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { GrowAnimation } from './constants/constant';
+import { DataService } from './services/data/data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [GrowAnimation]
 })
 export class AppComponent {
   title = 'to-do-list';
-  isOpen: boolean = false;
+
+  constructor(private dataService: DataService) {
+    this.dataService.initTodoList();
+  }
+  
 }

@@ -30,10 +30,6 @@ input[type=text], input[type=date], select, textarea {
     box-sizing: border-box;
 }
 
-input[type=text].task-title {
-    margin-bottom: 20px;
-}
-
 input[type=date]:hover, select {
     cursor: pointer;
 }

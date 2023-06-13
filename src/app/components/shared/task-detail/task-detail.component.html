@@ -1,20 +1,23 @@
-<div class="task-detail-container d-flex flex-column" [@openClose]="!data?.id ? 'open' : data?.show ? 'open' : 'closed'" >
-    <input type="text" placeholder="Add new task..." class="task-title">
-    <label>Description</label>
-    <textarea cols="30" rows="10"></textarea>
-    <div class="bottom d-flex">
-        <div class="date-container">
-            <label>Due date</label>
-            <input type="date" id="birthday" name="birthday">
+<div class="task-detail-container d-flex flex-column">
+    <form *ngIf="form" [formGroup]="form">
+        <input type="text" placeholder="Add new task..." class="task-title" formControlName="title">
+        <div class="error" *ngIf="form.controls['title'].hasError('required') && form.controls['title'].touched">Title is required</div>
+        <label class="desc-label">Description</label>
+        <textarea cols="30" rows="10" formControlName="description"></textarea>
+        <div class="bottom d-flex">
+            <div class="date-container">
+                <label>Due date</label>
+                <input type="date" id="birthday" name="birthday" formControlName="dueDate" [min]="minDate">
+            </div>
+            <div class="priority-container">
+                <label>Priority</label>
+                <select formControlName="priority">
+                    <option *ngFor="let priority of PRIORITY_LIST" [value]="priority.value">
+                        {{ priority.label }}
+                    </option>
+                </select>
+            </div>
         </div>
-        <div class="priority-container">
-            <label>Priority</label>
-            <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-        </div>
-    </div>
+    </form>
+    <app-button class="add" (click)="submit()">{{form && form.controls['id'].value ? 'Update' : 'Add'}}</app-button>
 </div>

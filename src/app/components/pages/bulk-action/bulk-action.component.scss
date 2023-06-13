@@ -1,0 +1,13 @@
+@import "variables";
+
+.bulk-action {
+    background: $gray-bg;
+    padding: 15px 30px;
+    position: fixed;
+    bottom: 0;
+    width: 66%;
+}
+
+.info {
+    margin-right: 20px;
+}

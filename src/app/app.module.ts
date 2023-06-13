@@ -8,7 +8,9 @@ import { TodoListComponent } from './components/pages/todo-list/todo-list.compon
 import { CheckboxComponent } from './components/shared/checkbox/checkbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './components/shared/button/button.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BulkActionComponent } from './components/pages/bulk-action/bulk-action.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     TodoListComponent,
     CheckboxComponent,
-    ButtonComponent
+    ButtonComponent,
+    BulkActionComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

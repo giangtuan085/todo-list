@@ -1,5 +1,4 @@
 <div class="sidebar-container">
     <h3 class="text-center">New Task</h3>
-    <app-task-detail></app-task-detail>
-    <app-button>Add</app-button>
+    <app-task-detail (formSubmit)="onSubmit($event)"></app-task-detail>
 </div>

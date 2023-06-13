@@ -4,6 +4,10 @@ input:not(input[type=date]) {
     margin-top: 0;
 }
 
+.desc-label {
+    margin-top: 20px;
+}
+
 textarea {
     margin-bottom: 10px;
     resize: vertical;
@@ -16,6 +20,23 @@ textarea {
     }
 
     & > div {
+        width: 100%;
+    }
+}
+
+.error {
+    font-size: 12px;
+    color: $danger;
+}
+
+button {
+    width: 100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+:host::ng-deep {
+    .add {
         width: 100%;
     }
 }

@@ -8,7 +8,7 @@ export const GrowAnimation = trigger('openClose', [
     })),
     state('closed', style({
         height: '0',
-        opacity: 0.1,
+        opacity: 0,
         overflow: 'hidden'
     })),
     transition('open => closed', [
@@ -37,4 +37,8 @@ export const PriorityList: OptionModel<Priority>[] = [
         value: Priority.High,
         label: 'High'
     },
-]
+];
+
+export const TodoListKey = 'todoList';
+export const MaxIdValue = 10000;
+export const MinIdValue = 1;
