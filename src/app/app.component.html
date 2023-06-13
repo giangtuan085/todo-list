@@ -5,5 +5,12 @@
 
   <div class="content">
     <app-todo-list></app-todo-list>
+    <div [@openClose]="isOpen ? 'open' : 'closed'" class="bulk-action d-flex justify-between align-center">
+      <label>Bulk action:</label>
+      <div class="right">
+        <app-button class="info">Done</app-button>
+        <app-button class="danger">Remove</app-button>
+      </div>
+    </div>
   </div>
 </div>

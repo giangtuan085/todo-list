@@ -2,9 +2,8 @@ import { animate, style, transition, trigger, state } from "@angular/animations"
 import { OptionModel } from "../models/task-model";
 
 export const GrowAnimation = trigger('openClose', [
-    // ...
     state('open', style({
-        height: '400px',
+        height: '82px',
         opacity: 1,
     })),
     state('closed', style({
@@ -13,27 +12,10 @@ export const GrowAnimation = trigger('openClose', [
         overflow: 'hidden'
     })),
     transition('open => closed', [
-        animate('1s')
+        animate('0.4s')
     ]),
     transition('closed => open', [
-        animate('0.5s')
-    ]),
-    transition('* => closed', [
-        animate('1s')
-    ]),
-    transition('* => open', [
-        animate('0.5s')
-    ]),
-    transition('open <=> closed', [
-        animate('0.5s')
-    ]),
-    transition('* => open', [
-        animate('1s',
-            style({ opacity: '*' }),
-        ),
-    ]),
-    transition('* => *', [
-        animate('1s')
+        animate('0.2s')
     ]),
 ])
 export enum Priority {

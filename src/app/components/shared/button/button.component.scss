@@ -12,7 +12,6 @@ button {
     min-width: 110px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
     vertical-align: middle;
 }
 
@@ -47,4 +46,8 @@ button.secondary {
 
 button.danger {
     background-color: $danger;
+}
+
+button.info {
+    background-color: $info;
 }

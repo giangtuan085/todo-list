@@ -1,19 +1,25 @@
 <div class="todo-list-container d-flex flex-column align-center">
     <h3>To Do List</h3>
-    <ng-container *ngFor="let task of todoList">
-        <div class="task">
+    <input type="text" placeholder="Search ..." class="search-input">
+    <div class="task-container d-flex flex-column align-center">
+        <div *ngFor="let task of todoList" class="task">
             <div class="header d-flex justify-between">
                 <div class="left-actions d-flex align-center">
                     <app-checkbox></app-checkbox>
                     <label>Do homework</label>
                 </div>
-
+    
                 <div class="right-actions">
                     <app-button class="secondary" (click)="task.show = !task.show">Detail</app-button>
                     <app-button class="danger">Remove</app-button>
                 </div>
             </div>
-            <app-task-detail [data]="task"></app-task-detail>
+            <div *ngIf="task.show" class="detail">
+                <app-task-detail [data]="task"></app-task-detail>
+                <div class="update">
+                    <app-button>Update</app-button>
+                </div>
+            </div>
         </div>
-    </ng-container>
+    </div>
 </div>

@@ -1,13 +1,12 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { GrowAnimation, Priority } from 'src/app/constants/constant';
+import { Priority } from 'src/app/constants/constant';
 import { Task } from 'src/app/models/task-model';
 
 @Component({
   selector: 'app-task-detail',
   templateUrl: './task-detail.component.html',
   styleUrls: ['./task-detail.component.scss'],
-  animations: [GrowAnimation]
 
 })
 export class TaskDetailComponent implements OnInit, OnChanges {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GrowAnimation, Priority } from 'src/app/constants/constant';
+import { Priority } from 'src/app/constants/constant';
 import { Task } from 'src/app/models/task-model';
 
 @Component({

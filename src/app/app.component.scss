@@ -6,10 +6,26 @@
 
 .sidebar {
     width: 30%;
+    border-right: 1px solid black;
+    min-width: 300px;
 }
 
 .content {
-    background: $primary;
     width: 70%;
     overflow: auto;
+    min-width: 750px;
+    position: relative;
+
+    .bulk-action {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+        background-color: $gray-bg;
+
+        .info {
+            margin-right: 20px;
+        }
+    }
 }

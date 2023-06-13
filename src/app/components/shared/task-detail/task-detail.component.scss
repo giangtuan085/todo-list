@@ -1,0 +1,21 @@
+@import "variables";
+
+input:not(input[type=date]) {
+    margin-top: 0;
+}
+
+textarea {
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.bottom {
+    display: flex;
+    .date-container {
+        margin-right: 10px;
+    }
+
+    & > div {
+        width: 100%;
+    }
+}
